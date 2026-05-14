@@ -1,0 +1,14 @@
+14 sym - 209
+14 asym - 162
+
+a280.tsp - 2579
+gr120.tsp - 6942
+pr226.tsp - 80369
+pcb442.tsp - 50778
+ftv70.atsp - 1950
+ftv170.atsp - 2755
+rbg323.atsp - 1326
+rbg443.atsp - 2720
+
+tsp link do opt -> https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/STSP.html
+atsp link do opt -> https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/ATSP.html

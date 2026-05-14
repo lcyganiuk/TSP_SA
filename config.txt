@@ -1,0 +1,56 @@
+# Maksymalny czas pracy jednej instancji [ms].
+time_limit_ms 900000
+
+# Minimalny czas przed zatrzymaniem po osiagnieciu wymaganego bledu [ms].
+min_time_before_target_ms 60000
+
+# Zatrzymanie po tylu epokach bez poprawy najlepszego wyniku.
+max_no_improve_epochs 5000
+
+# Ziarno generatora losowego.
+seed 1
+
+# Czy startowac od UB.
+use_ub true
+
+# Czy wyznaczac LB z MST.
+use_lb true
+
+# Schemat chlodzenia: geometric albo logarithmic.
+cooling geometric
+
+# Lambda dla chlodzenia geometrycznego.
+lambda 0.995
+
+# Sasiedztwo: swap, insert albo inverse.
+neighbourhood inverse
+
+# Docelowe poczatkowe prawdopodobienstwo akceptacji ruchu pogarszajacego.
+# T0 = -srednia_dodatnia_delta / ln(initial_acceptance).
+initial_acceptance 0.80
+
+# Mnoznik T0 do badan wplywu temperatury poczatkowej.
+initial_temperature_multiplier 1.0
+
+# Liczba prob losowych do oszacowania sredniej dodatniej delty dla T0.
+initial_temperature_samples 2000
+
+# Dlugosc epoki. 0 oznacza automatycznie: epoch_factor * n.
+epoch_length 0
+
+# Mnoznik rozmiaru instancji dla automatycznej dlugosci epoki.
+epoch_factor 20.0
+
+# Wymagany blad wzgledny [%] wzgledem OPT, a gdy OPT=0 pomocniczo wzgledem LB.
+target_error_percent 10.0
+
+# Co ile [ms] zapisywac przebieg f(x)(t) do CSV. 0 wylacza logowanie przebiegu.
+log_interval_ms 1000
+
+# Plik CSV z przebiegiem: instance;n;time_ms;iteration;temperature;current_cost;best_cost;lb;opt
+log_file sa_trace_pr226.csv
+
+# instance <sciezka_do_pliku> <OPT_lub_0_gdy_nieznany> <0=TSP, 1=ATSP>
+instance ..\data\tsplib\tsp\pr226.tsp 80369 0
+
+
